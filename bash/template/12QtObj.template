@@ -1,0 +1,31 @@
+
+#ifndef {%2}_H
+#define {%2}_H
+
+#include <QObject>
+
+class {%1} : public QObject
+{
+    Q_OBJECT
+public:
+    {%1}(QObject *parent = nullptr);
+    ~{%1}();
+
+signals:
+
+protected:
+
+private:
+
+};
+#endif // {%2}_H
+#==========#
+#include "{%1}.h"
+
+{%1}::{%1}(QObject *parent) : QObject(parent)
+{
+}
+
+{%1}::~{%1}()
+{
+}
