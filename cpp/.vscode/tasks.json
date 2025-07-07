@@ -1,0 +1,86 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CMake Create",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                ".."
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build/"
+            }
+        },
+        {
+            "label": "CMake Build",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "."
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build/"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Python Init",
+            "type": "shell",
+            "command": "python3",
+            "args": [
+                "../bash/mkdir.py",
+                "build"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/"
+            }
+        },
+        {
+            "label": "Python Clean",
+            "type": "shell",
+            "command": "python3",
+            "args": [
+                "../bash/rmdir.py",
+                "build"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/"
+            }
+        },
+        {
+            "label": "Run Linux",
+            "type": "shell",
+            "command": "cmake",
+            "dependsOrder": "sequence",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": [
+                "Python Init",
+                "CMake Create",
+                "CMake Build"
+            ]
+        },
+        {
+            "label": "Run Linux Reset",
+            "type": "shell",
+            "command": "cmake",
+            "dependsOrder": "sequence",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": [
+                "Python Clean",
+                "Python Init",
+                "CMake Create",
+                "CMake Build"
+            ]
+        }
+    ]
+}
