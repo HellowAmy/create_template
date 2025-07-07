@@ -6,7 +6,6 @@ argv:
 """
 
 import sys
-import shutil
 import os
 
 
@@ -24,8 +23,7 @@ if __name__ == "__main__":
     sys_path = sys.argv[1]
 
     # 创建不存在目录
-    if os.path.exists(sys_path) == False:
-        abs_path = os.path.abspath(sys_path)
+    abs_path = os.path.abspath(sys_path)
+    if os.path.exists(abs_path) == False:
         os.mkdir(abs_path)
         print("< 创建完成 >\n", abs_path)
-

@@ -75,7 +75,7 @@ if __name__ == "__main__":
     path_template = os.path.dirname(os.path.abspath(__file__)) + "/template/"
 
     # 判断参数
-    if len(sys.argv) < 4:
+    if len(sys.argv) <= 3:
         print("[argv] : [1: class name] [2: template index] [3: create path]")
         show_template_ls(path_template)
         exit(0)

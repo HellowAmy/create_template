@@ -32,7 +32,7 @@
             "type": "shell",
             "command": "python3",
             "args": [
-                "../bash/mkdir.py",
+                "./bash/mkdir.py",
                 "build"
             ],
             "options": {
@@ -44,7 +44,7 @@
             "type": "shell",
             "command": "python3",
             "args": [
-                "../bash/rmdir.py",
+                "./bash/rmdir.py",
                 "build"
             ],
             "options": {

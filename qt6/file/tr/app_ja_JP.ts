@@ -4,12 +4,12 @@
 <context>
     <name>dialog_tr</name>
     <message>
-        <location filename="../../window/dialog/dialog_tr.cpp" line="76"/>
+        <location filename="../../window/dialog/dialog_tr.cpp" line="75"/>
         <source>Help</source>
         <translation>ヘルプ</translation>
     </message>
     <message>
-        <location filename="../../window/dialog/dialog_tr.cpp" line="77"/>
+        <location filename="../../window/dialog/dialog_tr.cpp" line="76"/>
         <source>Switch languages</source>
         <translation>言語を切り替える</translation>
     </message>
