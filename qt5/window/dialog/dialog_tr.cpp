@@ -16,7 +16,6 @@ dialog_tr::dialog_tr(QWidget *parent) : QDialog(parent)
 
     _lab_help = new QLabel(this);
     _lab_help->setAlignment(Qt::AlignCenter);
-    laym->addWidget(_lab_languages);
 
     _lab_languages = new QLabel(this);
     _lab_languages->setAlignment(Qt::AlignCenter);

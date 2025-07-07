@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="en_US" sourcelanguage="en">
+<TS version="2.1" language="en_US">
 <context>
     <name>dialog_tr</name>
     <message>
-        <location filename="../../window/dialog/dialog_tr.cpp" line="76"/>
+        <location filename="../../window/dialog/dialog_tr.cpp" line="75"/>
         <source>Help</source>
-        <translation>Help</translation>
+        <translation type="unfinished">Help</translation>
     </message>
     <message>
-        <location filename="../../window/dialog/dialog_tr.cpp" line="77"/>
+        <location filename="../../window/dialog/dialog_tr.cpp" line="76"/>
         <source>Switch languages</source>
-        <translation>Switch languages</translation>
+        <translation type="unfinished">Switch languages</translation>
     </message>
 </context>
 <context>
@@ -19,12 +19,12 @@
     <message>
         <location filename="../../window/main_window.cpp" line="18"/>
         <source>TR</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../window/main_window.cpp" line="29"/>
         <source>CSS</source>
-        <translation></translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

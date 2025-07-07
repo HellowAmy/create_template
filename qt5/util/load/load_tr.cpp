@@ -13,7 +13,7 @@ void load_tr::set_prefix(const QString &prefix)
 {
     _prefix = prefix;
 }
-
+#include <QDebug>
 bool load_tr::is_load_tr(QApplication *app, QLocale::Language type)
 {
     if (app == nullptr)
@@ -28,9 +28,15 @@ bool load_tr::is_load_tr(QApplication *app, QLocale::Language type)
     }
     else
     {
+        QString locname = "";
+        for (auto a : QLocale(type).uiLanguages())
+        {
+            locname = QLocale(a).name();
+            break;
+        }
+
         QTranslator *trl = new QTranslator(this);
-        // QString name = _prefix + QLocale(QLocale::languageToCode(type)).name();
-        QString name = _prefix + QLocale::languageToString(type);
+        QString name = _prefix + locname;
         if (trl->load(name))
         {
             return app->installTranslator(trl);
