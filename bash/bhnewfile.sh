@@ -1,1 +1,2 @@
-python3 /home/red/open/work/create_template/bash/newfile.py $1 $2 .
+filepath=$(dirname "$(readlink -f "$0")")
+python3 ${filepath}/newfile.py $1 $2 .

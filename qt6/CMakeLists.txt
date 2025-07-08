@@ -108,3 +108,11 @@ qt_generate_deploy_app_script(
 )
 install(SCRIPT ${deploy_script})
 
+# 安装配置文件或目录
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/lib/
+    DESTINATION lib/
+)
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/config/
+    DESTINATION config/
+)
+
