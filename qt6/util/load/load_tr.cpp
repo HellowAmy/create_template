@@ -28,7 +28,7 @@ bool load_tr::is_load_tr(QApplication *app, QLocale::Language type)
     }
     else
     {
-        QTranslator *trl = new QTranslator(this);
+        TranslatorNon *trl = new TranslatorNon(this);
         QString name = _prefix + QLocale(QLocale::languageToCode(type)).name();
         if (trl->load(name))
         {

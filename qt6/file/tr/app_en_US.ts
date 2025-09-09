@@ -6,12 +6,12 @@
     <message>
         <location filename="../../window/dialog/dialog_tr.cpp" line="75"/>
         <source>Help</source>
-        <translation>Help</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../window/dialog/dialog_tr.cpp" line="76"/>
         <source>Switch languages</source>
-        <translation>Switch languages</translation>
+        <translation></translation>
     </message>
 </context>
 <context>

@@ -9,6 +9,7 @@
 
 #include <map>
 
+#include "TranslatorNon.h"
 #include "Tsin.h"
 
 class load_tr : public QObject

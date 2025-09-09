@@ -46,10 +46,10 @@ set(CMAKE_BUILD_TYPE "Debug")
 # set(CMAKE_BUILD_TYPE "Release")
 
 # 载入头文件
-bhfn_include_dirs(HEAD_third third)
 bhfn_include_dirs(HEAD_util util)
+bhfn_include_dirs(HEAD_extend extend)
 bhfn_include_dirs(HEAD_window window)
-include_directories(${HEAD_third} ${HEAD_util} ${HEAD_window})
+include_directories(${HEAD_util} ${HEAD_extend} ${HEAD_window})
 
 # 查找Qt模块
 find_package(Qt6 REQUIRED COMPONENTS Core Widgets LinguistTools)
@@ -60,10 +60,12 @@ qt_standard_project_setup()
 # 载入源文件与生成可执行程序
 bhfn_srcs(SRC_window window)
 bhfn_srcs(SRC_util util)
+bhfn_srcs(SRC_extend extend)
 set(SRC_ALL 
     main.cpp
     ${SRC_window}
     ${SRC_util}
+    ${SRC_extend}
 )
 qt_add_executable(${CMAKE_PROJECT_NAME} WIN32 MACOSX_BUNDLE ${SRC_ALL})
 
