@@ -37,3 +37,8 @@ bool load_tr::is_load_tr(QApplication *app, QLocale::Language type)
     }
     return false;
 }
+
+load_tr *load_tr::sin()
+{
+    return bhtools::Tsind<load_tr>::get();
+}

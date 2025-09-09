@@ -36,3 +36,8 @@ QString load_css::load_css_ctx(QString file)
     }
     return ctx;
 }
+
+load_css *load_css::sin()
+{
+    return bhtools::Tsind<load_css>::get();
+}

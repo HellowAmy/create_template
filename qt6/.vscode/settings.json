@@ -72,6 +72,8 @@
         "iomanip": "cpp",
         "span": "cpp",
         "sstream": "cpp",
-        "typeindex": "cpp"
+        "typeindex": "cpp",
+        "qfileinfo": "cpp",
+        "qobject": "cpp"
     }
 }

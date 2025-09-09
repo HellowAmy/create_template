@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
         bool is_css = load_css::is_load_css(&a);
         vlogd("Load css result: " << $(is_css));
     
-        bool is_tr = Tsin_load_tr()()->is_load_tr(&a, QLocale::English);
+        bool is_tr = load_tr::sin()->is_load_tr(&a, QLocale::English);
         vlogd("Load tr result: " << $(is_tr));
     }
 

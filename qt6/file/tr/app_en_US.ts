@@ -17,12 +17,12 @@
 <context>
     <name>main_window</name>
     <message>
-        <location filename="../../window/main_window.cpp" line="18"/>
+        <location filename="../../window/main_window.cpp" line="19"/>
         <source>TR</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../../window/main_window.cpp" line="29"/>
+        <location filename="../../window/main_window.cpp" line="30"/>
         <source>CSS</source>
         <translation></translation>
     </message>

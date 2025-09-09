@@ -90,10 +90,9 @@ set(QRC_LIST
 qt5_add_resources(QRC_FILE ${QRC_LIST})
 
 # 载入头文件
-bhfn_include_dirs(HEAD_third third)
 bhfn_include_dirs(HEAD_util util)
 bhfn_include_dirs(HEAD_window window)
-include_directories(${HEAD_third} ${HEAD_util} ${HEAD_window})
+include_directories(${HEAD_util} ${HEAD_window})
 
 # 载入源文件与生成可执行程序
 bhfn_srcs(SRC_window window)

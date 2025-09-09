@@ -31,7 +31,7 @@ dialog_tr::dialog_tr(QWidget *parent) : QDialog(parent)
             lay->addWidget(but);
 
             connect(but, &QPushButton::clicked, [=]() {
-                bool is_tr = Tsin_load_tr()()->is_load_tr(qApp,QLocale::Chinese);
+                bool is_tr = load_tr::sin()->is_load_tr(qApp,QLocale::Chinese);
                 vlogd("Load tr result: " << $(is_tr));
 
                 switch_languages(); 
@@ -43,7 +43,7 @@ dialog_tr::dialog_tr(QWidget *parent) : QDialog(parent)
             lay->addWidget(but);
 
             connect(but, &QPushButton::clicked, [=]() {
-                bool is_tr = Tsin_load_tr()()->is_load_tr(qApp,QLocale::English);
+                bool is_tr = load_tr::sin()->is_load_tr(qApp,QLocale::English);
                 vlogd("Load tr result: " << $(is_tr));
     
                 switch_languages(); 
@@ -55,7 +55,7 @@ dialog_tr::dialog_tr(QWidget *parent) : QDialog(parent)
             lay->addWidget(but);
 
             connect(but, &QPushButton::clicked, [=]() {
-                bool is_tr = Tsin_load_tr()()->is_load_tr(qApp,QLocale::Japanese);
+                bool is_tr = load_tr::sin()->is_load_tr(qApp,QLocale::Japanese);
                 vlogd("Load tr result: " << $(is_tr));
 
                 switch_languages(); 

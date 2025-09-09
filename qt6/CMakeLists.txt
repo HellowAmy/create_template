@@ -32,13 +32,37 @@ function(bhfn_libs result root_dir)
     file(GLOB_RECURSE reslib "${root_dir}/*.so*")
     set(${result} ${reslib} PARENT_SCOPE)
 endfunction()
-# == 函数 ==
 
+
+# 递归获取目录下的文件
+# 参数 [变量][路径]
+function(bhfn_files result root_dir)
+    file(GLOB_RECURSE reslib "${root_dir}/*")
+    set(retlist "")
+    foreach(file_path ${reslib})
+        string(REPLACE "${CMAKE_SOURCE_DIR}/" "" relative ${file_path})
+        list(APPEND retlist ${relative})
+    endforeach()
+    set(${result} ${retlist} PARENT_SCOPE)
+endfunction()
+
+
+# 在列表上追加前后字符并返回结果
+# 参数 [结果][前缀][后缀][输入]
+function(bhfn_append result front back ls)
+    set(retlist "")
+    foreach(val ${ls})
+        set(retval ${front} ${val} ${back})
+        list(APPEND retlist ${retval})
+    endforeach()
+    set(${result} ${retlist} PARENT_SCOPE)
+endfunction()
+# == 函数 ==
 
 
 # ===== 编译入口 =====
 # 项目名
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 4.0)
 project(hellow LANGUAGES CXX)
 
 # 调试模式
@@ -72,16 +96,16 @@ qt_add_executable(${CMAKE_PROJECT_NAME} WIN32 MACOSX_BUNDLE ${SRC_ALL})
 # 生成翻译文件
 qt_add_translations(
     TARGETS ${CMAKE_PROJECT_NAME}
-    TS_FILES file/tr/app_zh_CN.ts
     TS_FILES file/tr/app_en_US.ts
     TS_FILES file/tr/app_ja_JP.ts
+    TS_FILES file/tr/app_zh_CN.ts
 )
 
 # 添加资源文件
+bhfn_files(RES_CSS file/css)
 qt_add_resources(${CMAKE_PROJECT_NAME} "app_resources"
     PREFIX "/"
-    FILES
-        file/css/common.css
+    FILES ${RES_CSS}
 )
 
 # 连接Qt模块

@@ -23,20 +23,14 @@ public:
 
     bool is_load_tr(QApplication *app = nullptr, QLocale::Language type = QLocale::Chinese);
 
+    static load_tr *sin();
+
 signals:
 
 protected:
 private:
     QString _prefix = ":/i18n/app_";
     std::map<QLocale::Language, QTranslator *> _mp_tr;
-};
-
-struct Tsin_load_tr
-{
-    load_tr *operator()()
-    {
-        return bhtools::Tsind<load_tr>::get();
-    }
 };
 
 #endif // LOAD_TR_H

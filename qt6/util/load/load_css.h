@@ -5,6 +5,9 @@
 #include <QObject>
 #include <QApplication>
 #include <QFile>
+#include <QFileInfo>
+
+#include "Tsin.h"
 
 class load_css : public QObject
 {
@@ -16,6 +19,8 @@ public:
     static bool is_load_css(QApplication *app = nullptr, QString file = ":/file/css/common.css");
 
     static QString load_css_ctx(QString file);
+
+    static load_css *sin();
 
 signals:
 

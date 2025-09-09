@@ -13,7 +13,7 @@ void load_tr::set_prefix(const QString &prefix)
 {
     _prefix = prefix;
 }
-#include <QDebug>
+
 bool load_tr::is_load_tr(QApplication *app, QLocale::Language type)
 {
     if (app == nullptr)
