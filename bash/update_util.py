@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     ls_name = ["cpp", "qt5", "qt6"]
 
-    path_bhtools = os.path.join("../", "util", "bhtools")
+    path_bhtools = os.path.join("../", "util", "bhtools", "include")
     paht_cpp = os.path.join("../", "cpp", "include", "bhtools")
     paht_qt5 = os.path.join("../", "qt5", "util", "bhtools")
     paht_qt6 = os.path.join("../", "qt6", "util", "bhtools")
