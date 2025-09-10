@@ -1,0 +1,3 @@
+[submodule "bhtools"]
+    path = util/bhtools
+    url = https://github.com/HellowAmy/bhtools.git
